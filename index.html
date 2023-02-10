@@ -1,5 +1,11 @@
 <html xmlns=http://www.w3.org/1999/xhtml>
 <head>
+  <script>
+    (async function() {
+        const { text } = await( await fetch(`/api/message`)).json();
+        document.querySelector('#name').textContent = text;
+    }());
+    </script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>My Azure Web App</title>
 <style type="text/css">
